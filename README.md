@@ -542,14 +542,14 @@ These are optional extensions and are not required for the core implementation.
 
 ### ByteCare
 
-**Project:** Chronos Monitor  
-**Team ID:** DSCPP-III-2026-T125d  
-**Semester:** 3rd Semester
-
+**Project:** Chronos Monitor  <br>
+**Team ID:** DSCPP-III-2026-T125d <br> 
+**Semester:** 3rd Semester<br>
+<br>
  Members: 
- Aradhya Uniyal: Team Lead 
- Nikita:  OOP/Telemetry Input
- Uddhav Bhargava: Data Structures/Alert Management 
+ Aradhya Uniyal: Team Lead <br>
+ Nikita:  OOP/Telemetry Input <br>
+ Uddhav Bhargava: Data Structures/Alert Management <br>
 
 **Mentor:** Mr. Utkarsh Pant Sir
 
