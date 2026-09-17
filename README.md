@@ -413,26 +413,26 @@ Possible evaluation parameters:
 ## 15. Repository Structure
 
 ```text
-chronos-monitor/
+chronos-monitor
 │
 ├── README.md
-├── include/
+├── include
 │   ├── TelemetryRecord.h
 │   ├── MonitoringSystem.h
 │   ├── AlertManager.h
 │   └── ReportManager.h
 │
-├── src/
+├── src
 │   ├── TelemetryRecord.cpp
 │   ├── MonitoringSystem.cpp
 │   ├── AlertManager.cpp
 │   └── ReportManager.cpp
 │
-├── data/
+├── data
 │   ├── telemetry.txt
 │   └── alerts.txt
 │
-├── tests/
+├── tests
 │   └── test_cases.cpp
 │
 └── main.cpp
