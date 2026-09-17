@@ -546,7 +546,7 @@ These are optional extensions and are not required for the core implementation.
 **Team ID:** DSCPP-III-2026-T125d <br> 
 **Semester:** 3rd Semester<br>
 <br>
- Members: 
+ Members: <br>
  Aradhya Uniyal: Team Lead <br>
  Nikita:  OOP/Telemetry Input <br>
  Uddhav Bhargava: Data Structures/Alert Management <br>
