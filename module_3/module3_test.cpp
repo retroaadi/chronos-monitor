@@ -8,9 +8,7 @@ int main()
 {
     AlertManager alertManager;
 
-    // --------------------------------------------------------
-    // Create test telemetry records
-    // --------------------------------------------------------
+    // ~ Create test telemetry records
 
     TelemetryRecord record1(
         1,
@@ -47,10 +45,7 @@ int main()
         "10:00:05"
     );
 
-
-    // --------------------------------------------------------
-    // Calculate status and severity
-    // --------------------------------------------------------
+    // ~ Calculate status and severity
 
     record1.calculateStatus();
     record2.calculateStatus();
@@ -58,14 +53,11 @@ int main()
     record4.calculateStatus();
     record5.calculateStatus();
 
+    // ~ TEST 1: NORMAL RECORD
 
-    // ========================================================
-    // TEST 1: NORMAL RECORD
-    // ========================================================
-
-    cout << "\n\n========================================\n";
+    cout << "\n";
     cout << "       TEST 1: NORMAL RECORD\n";
-    cout << "========================================\n";
+    cout << "\n";
 
     alertManager.processRecord(record1);
 
@@ -73,14 +65,11 @@ int main()
          << alertManager.getAlertCount()
          << endl;
 
+    // ~ TEST 2: WARNING RECOR
 
-    // ========================================================
-    // TEST 2: WARNING RECORD
-    // ========================================================
-
-    cout << "\n\n========================================\n";
+    cout << "\n";
     cout << "       TEST 2: WARNING RECORD\n";
-    cout << "========================================\n";
+    cout << "\n";
 
     alertManager.processRecord(record2);
 
@@ -88,14 +77,11 @@ int main()
          << alertManager.getAlertCount()
          << endl;
 
+    // ~ TEST 3: MULTIPLE ALERTS
 
-    // ========================================================
-    // TEST 3: MULTIPLE ALERTS
-    // ========================================================
-
-    cout << "\n\n========================================\n";
+    cout << "\n";
     cout << "       TEST 3: MULTIPLE ALERTS\n";
-    cout << "========================================\n";
+    cout << "\n";
 
     alertManager.processRecord(record3);
     alertManager.processRecord(record4);
@@ -105,36 +91,27 @@ int main()
          << alertManager.getAlertCount()
          << endl;
 
+    // ~ TEST 4: ALERT HISTORY
 
-    // ========================================================
-    // TEST 4: ALERT HISTORY
-    // ========================================================
-
-    cout << "\n\n========================================\n";
+    cout << "\n";
     cout << "       TEST 4: ALERT HISTORY\n";
-    cout << "========================================\n";
+    cout << "\n";
 
     alertManager.displayAlertHistory();
 
+    // ~ TEST 5: PRIORITY QUEUE
 
-    // ========================================================
-    // TEST 5: PRIORITY QUEUE
-    // ========================================================
-
-    cout << "\n\n========================================\n";
+    cout << "\n";
     cout << "       TEST 5: PRIORITY QUEUE\n";
-    cout << "========================================\n";
+    cout << "\n";
 
     alertManager.displayPriorityAlerts();
 
+    // ~ TEST 6: HIGHEST PRIORITY ALERT
 
-    // ========================================================
-    // TEST 6: HIGHEST PRIORITY ALERT
-    // ========================================================
-
-    cout << "\n\n========================================\n";
+    cout << "\n";
     cout << "       TEST 6: HIGHEST PRIORITY\n";
-    cout << "========================================\n";
+    cout << "\n";
 
     Alert highestPriority =
         alertManager.getHighestPriorityAlert();
@@ -143,36 +120,27 @@ int main()
 
     highestPriority.displayAlert();
 
-
-    // ========================================================
     // TEST 7: REMAINING PRIORITY QUEUE
-    // ========================================================
 
-    cout << "\n\n========================================\n";
+    cout << "\n";
     cout << "       TEST 7: REMAINING ALERTS\n";
-    cout << "========================================\n";
+    cout << "\n";
 
     alertManager.displayPriorityAlerts();
 
+    // ~ TEST 8: ALERT HISTORY AFTER REMOVAL
 
-    // ========================================================
-    // TEST 8: ALERT HISTORY AFTER REMOVAL
-    // ========================================================
-
-    cout << "\n\n========================================\n";
+    cout << "\n";
     cout << "       TEST 8: HISTORY AFTER REMOVAL\n";
-    cout << "========================================\n";
+    cout << "\n";
 
     alertManager.displayAlertHistory();
 
+    // ~ TEST 9: CLEAR ALERTS
 
-    // ========================================================
-    // TEST 9: CLEAR ALERTS
-    // ========================================================
-
-    cout << "\n\n========================================\n";
+    cout << "\n";
     cout << "       TEST 9: CLEAR ALERTS\n";
-    cout << "========================================\n";
+    cout << "\n";
 
     alertManager.clearAlerts();
 
@@ -184,14 +152,11 @@ int main()
 
     alertManager.displayPriorityAlerts();
 
+    // ~ FINAL MESSAGE
 
-    // ========================================================
-    // FINAL MESSAGE
-    // ========================================================
-
-    cout << "\n\n========================================\n";
+    cout << "\n";
     cout << "       MODULE 3 TEST COMPLETED\n";
-    cout << "========================================\n";
+    cout << "\n";
 
     return 0;
 }
