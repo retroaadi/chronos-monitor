@@ -77,9 +77,9 @@ int Alert::getSeverity() const
 // Display alert information
 void Alert::displayAlert() const
 {
-    cout << "\n========================================\n";
+    cout << "\n";
     cout << "                 ALERT\n";
-    cout << "========================================\n";
+    cout << "\n";
 
     cout << "Alert ID        : " << alertID << endl;
     cout << "Record ID       : " << recordID << endl;
@@ -89,5 +89,5 @@ void Alert::displayAlert() const
     cout << "Status          : " << status << endl;
     cout << "Severity        : " << severity << endl;
 
-    cout << "========================================\n";
+    cout << "\n";
 }
