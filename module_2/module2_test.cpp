@@ -30,7 +30,7 @@ int main()
     // TEST 1: Add records
     // --------------------------------------------------
 
-    cout << "\n========== TEST 1: ADD RECORDS ==========\n";
+    cout << "\n--- TEST 1: ADD RECORDS ---\n";
 
     dataManager.addRecord(record1);
     dataManager.addRecord(record2);
@@ -46,7 +46,7 @@ int main()
     // TEST 2: Display recent records
     // --------------------------------------------------
 
-    cout << "\n========== TEST 2: RECENT RECORDS ==========\n";
+    cout << "\n--- TEST 2: RECENT RECORDS ---\n";
 
     dataManager.displayRecentRecords();
 
@@ -55,7 +55,7 @@ int main()
     // TEST 3: Display complete history
     // --------------------------------------------------
 
-    cout << "\n========== TEST 3: COMPLETE HISTORY ==========\n";
+    cout << "\n--- TEST 3: COMPLETE HISTORY ---\n";
 
     dataManager.displayHistory();
 
@@ -67,7 +67,7 @@ int main()
     // TEST 4: Fill the circular queue
     // --------------------------------------------------
 
-    cout << "\n========== TEST 4: FILL QUEUE ==========\n";
+    cout << "\n--- TEST 4: FILL QUEUE ---\n";
 
     dataManager.addRecord(record4);
     dataManager.addRecord(record5);
@@ -91,7 +91,7 @@ int main()
     // TEST 5: Circular Queue replacement
     // --------------------------------------------------
 
-    cout << "\n========== TEST 5: CIRCULAR REPLACEMENT ==========\n";
+    cout << "\n--- TEST 5: CIRCULAR REPLACEMENT ---\n";
 
     cout << "Adding Record 6...\n";
     cout << "The oldest recent record should be replaced.\n";
@@ -107,7 +107,7 @@ int main()
     // TEST 6: Check complete history
     // --------------------------------------------------
 
-    cout << "\n========== TEST 6: HISTORY CHECK ==========\n";
+    cout << "\n--- TEST 6: HISTORY CHECK ---\n";
 
     cout << "Complete history should contain all 6 records:\n";
 
@@ -121,7 +121,7 @@ int main()
     // TEST 7: Remove oldest record
     // --------------------------------------------------
 
-    cout << "\n========== TEST 7: REMOVE OLDEST ==========\n";
+    cout << "\n--- TEST 7: REMOVE OLDEST ---\n";
 
     dataManager.removeOldestRecord();
 
@@ -137,7 +137,7 @@ int main()
     // TEST 8: Clear all records
     // --------------------------------------------------
 
-    cout << "\n========== TEST 8: CLEAR RECORDS ==========\n";
+    cout << "\n--- TEST 8: CLEAR RECORDS ---\n";
 
     dataManager.clearRecords();
 
@@ -154,7 +154,7 @@ int main()
     // TEST 9: Check empty queue
     // --------------------------------------------------
 
-    cout << "\n========== TEST 9: EMPTY CHECK ==========\n";
+    cout << "\n--- TEST 9: EMPTY CHECK ---\n";
 
     if (dataManager.isEmpty())
         cout << "Queue is empty. TEST PASSED.\n";
@@ -162,9 +162,9 @@ int main()
         cout << "Queue is not empty. TEST FAILED.\n";
 
 
-    cout << "\n========================================\n";
+    cout << "\n";
     cout << "       MODULE 2 TEST COMPLETED\n";
-    cout << "========================================\n";
+    cout << "\n";
 
 
     return 0;
