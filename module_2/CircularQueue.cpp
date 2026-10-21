@@ -29,7 +29,6 @@ CircularQueue::~CircularQueue()
 
 void CircularQueue::enqueue(const TelemetryRecord& record)
 {
-    // If queue is full, remove the oldest record
     if (isFull())
     {
         front = (front + 1) % capacity;
@@ -93,7 +92,7 @@ void CircularQueue::display() const
         return;
     }
 
-    cout << "\n========== RECENT TELEMETRY ==========\n";
+    cout << "\n---RECENT TELEMETRY---\n";
 
     int index = front;
 
@@ -104,7 +103,7 @@ void CircularQueue::display() const
         index = (index + 1) % capacity;
     }
 
-    cout << "======================================\n";
+    cout << "\n";
 }
 
 
