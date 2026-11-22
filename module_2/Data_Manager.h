@@ -34,6 +34,9 @@ public:
     // Add a telemetry record
     void addRecord(const TelemetryRecord& record);
 
+    // Return complete telemetry history
+    const vector<TelemetryRecord>& getHistory() const;
+
     // Remove the oldest telemetry record
     void removeOldestRecord();
 

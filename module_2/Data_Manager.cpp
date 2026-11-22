@@ -3,6 +3,8 @@
 
 using namespace std;
 
+
+// Constructor
 DataManager::DataManager()
 {
     front = 0;
@@ -10,27 +12,39 @@ DataManager::DataManager()
     count = 0;
 }
 
+// This returns a read-only reference to complete history,
+const vector<TelemetryRecord>& DataManager::getHistory() const
+{
+    return history;
+}
 
 // Add a telemetry record
 void DataManager::addRecord(const TelemetryRecord& record)
 {
     // Store record in complete history
     history.push_back(record);
+
+    // Move rear to the next circular position
     rear = (rear + 1) % QUEUE_SIZE;
 
-    // Store the new record in recent record queue
+    // Store the new record in recent-record queue
     recentRecords[rear] = record;
 
+    // If queue is not full
     if (count < QUEUE_SIZE)
     {
         count++;
     }
     else
     {
+        // Queue was already full.
+        // The oldest record has been replaced.
         front = (front + 1) % QUEUE_SIZE;
     }
 }
 
+
+// Remove the oldest telemetry record
 void DataManager::removeOldestRecord()
 {
     if (isEmpty())
@@ -38,10 +52,13 @@ void DataManager::removeOldestRecord()
         cout << "Queue is empty. No record to remove.\n";
         return;
     }
+
+    // Move front to the next position
     front = (front + 1) % QUEUE_SIZE;
 
     count--;
-    
+
+    // Reset queue when it becomes empty
     if (count == 0)
     {
         rear = -1;
@@ -59,19 +76,21 @@ void DataManager::displayRecentRecords() const
         return;
     }
 
-    cout << "\n";
+    cout << "\n========================================\n";
     cout << "       RECENT TELEMETRY RECORDS\n";
-    cout << "\n";
+    cout << "========================================\n";
 
     int currentIndex = front;
 
     for (int i = 0; i < count; i++)
     {
         recentRecords[currentIndex].displayRecord();
+
+        // Move circularly to the next record
         currentIndex = (currentIndex + 1) % QUEUE_SIZE;
     }
 
-    cout << "\n";
+    cout << "========================================\n";
 }
 
 
@@ -84,16 +103,16 @@ void DataManager::displayHistory() const
         return;
     }
 
-    cout << "\n";
-    cout << "---COMPLETE TELEMETRY HISTORY---\n";
-    cout << "\n";
+    cout << "\n========================================\n";
+    cout << "       COMPLETE TELEMETRY HISTORY\n";
+    cout << "========================================\n";
 
     for (const auto& record : history)
     {
         record.displayRecord();
     }
 
-    cout << "\n";
+    cout << "========================================\n";
 }
 
 

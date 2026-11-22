@@ -1,0 +1,22 @@
+# Compiled Executables
+*.exe
+*.o
+*.obj
+
+# Logs
+*.log
+server_stdout.log
+server_stderr.log
+
+# Exported CSVs
+*.csv
+
+# Temporary notes & VS Code files
+running_content.txt
+readme1
+to_run.txt
+tempCodeRunnerFile.*
+.vscode/
+
+# Duplicate folders
+something/
